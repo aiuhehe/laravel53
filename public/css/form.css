@@ -1,0 +1,94 @@
+input[type="email"]:focus {
+    outline: #1abc9c;
+    border: 0;
+    box-shadow: 0 0 3px 0 #1abc9c;
+}
+input[type="password"]:focus {
+    outline: #1abc9c;
+    border: 0;
+    box-shadow: 0 0 3px 0 #1abc9c;
+}
+input[type="text"]:focus {
+    outline: #1abc9c;
+    border: 0;
+    box-shadow: 0 0 3px 0 #1abc9c;
+}
+
+.btn-success {
+    display:inline-block;
+    padding:5px 10px;
+    background-color:#1abc9c;
+    color:#fff;
+    border:1px solid #1abc9c;
+    text-decoration:none;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+
+.btn-success:focus,
+.btn-success.focus {
+    background-color:#75DFB8;
+    border-color: #17886d;
+    -webkit-box-shadow:inset 0px 0px 3px #fff;
+    -moz-box-shadow:inset 0px 0px 3px #fff;
+    box-shadow:inset 0px 0px 3px #fff;
+}
+
+.btn-success:hover {
+    background-color:#75DFB8;
+    border-color: #17886d;
+    -webkit-box-shadow:inset 0px 0px 3px #fff;
+    -moz-box-shadow:inset 0px 0px 3px #fff;
+    box-shadow:inset 0px 0px 3px #fff;
+}
+
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+    color: #fff;
+    background-color: #19AA89;
+    border-color: #17886d;
+}
+
+.btn-success:active:hover,
+.btn-success.active:hover,
+.open > .dropdown-toggle.btn-success:hover,
+.btn-success:active:focus,
+.btn-success.active:focus,
+.open > .dropdown-toggle.btn-success:focus,
+.btn-success:active.focus,
+.btn-success.active.focus,
+.open > .dropdown-toggle.btn-success.focus {
+    background-color:#75DFB8;
+    border-color: #17886d;
+    -webkit-box-shadow:inset 0px 0px 3px #fff;
+    -moz-box-shadow:inset 0px 0px 3px #fff;
+    box-shadow:inset 0px 0px 3px #fff;
+}
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+    background-image: none;
+}
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus {
+    background-color:#75DFB8;
+    border-color: #17886d;
+}
+
+.btn-success .badge {
+    background-color:#17886d;
+    border-color: #17886d;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgb(200, 200, 200) inset;
+}
