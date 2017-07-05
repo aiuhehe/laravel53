@@ -11,7 +11,9 @@
 
     @yield('script-all')
 </head>
-<body class="hold-transition skin-black-light sidebar-mini">
+{{--<body class="hold-transition skin-black-light sidebar-mini">--}}
+<body class="hold-transition skin-original sidebar-mini">
+{{--<body class="hold-transition skin-red sidebar-mini">--}}
 <div class="wrapper">
 
 @yield('header')

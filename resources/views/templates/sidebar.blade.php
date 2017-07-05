@@ -34,22 +34,25 @@
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="#"><i class="fa fa-circle-o"></i>
+                        <a href="#" class="confirm"><i class="fa fa-circle-o"></i>
                             プッシュリスト
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#"><i class="fa fa-circle-o"></i>
                             プッシュ登録
                         </a>
                     </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-circle-o"></i>
+                    <li>
+                        <a class="disabled confirm">
+                            <i class="fa fa-circle-o"></i>
                             プッシュ登録確認
                         </a>
+
                     </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-circle-o"></i>
+                    <li>
+                        <a class="disabled">
+                            <i class="fa fa-circle-o"></i>
                             プッシュ登録完了
                         </a>
                     </li>
