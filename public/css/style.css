@@ -1,0 +1,22 @@
+@charset "UTF-8";
+body{
+    font-family: Helvetica,'Helvetica Neue','Noto Sans Japanese','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic'!important;
+}
+/* H1 - H6 font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: Helvetica,'Helvetica Neue','Noto Sans Japanese','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic'!important;
+}
+.main-header .logo {
+    font-family: Helvetica,'Helvetica Neue','Noto Sans Japanese','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic'!important;
+}
