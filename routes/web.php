@@ -27,3 +27,16 @@ Route::get('/dashboard', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+/**
+ * タスク機能
+ */
+Route::group(['prefix' => '/task'], function () {
+    Route::get('/', 'TasksController@index');
+    /** タスク追加 */
+    Route::post('/', 'TasksController@add');
+    /** タスク削除 */
+    Route::delete('/{id}', 'TasksController@delete');
+});
+
+
