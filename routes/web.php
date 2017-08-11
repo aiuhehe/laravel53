@@ -23,3 +23,7 @@ Route::get('/lte-register', function () {
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
