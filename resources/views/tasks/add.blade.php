@@ -61,12 +61,22 @@
 
                             <!-- Delete Button -->
                             <td>
-                                <form action="/task/{{ $task->id }}" method="POST">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
+                                @can('update-task', $task)
+                                    <form action="/task/edit/{{ $task->id }}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('UPDATE') }}
 
-                                    <button>Delete Task</button>
-                                </form>
+                                        <button>Edit Task</button>
+                                    </form>
+                                @endcan
+                                @can('delete-task', $task)
+                                    <form action="/task/{{ $task->id }}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+
+                                        <button>Delete Task</button>
+                                    </form>
+                                @endcan
                             </td>
                         </tr>
                     @endforeach

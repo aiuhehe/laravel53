@@ -32,16 +32,34 @@ class TasksController extends Controller
         // Create The Task...
         Task::create([
             'content' => $request['content'],
-            'do_date' => Carbon::today(),
+            'user_id' => \Auth::user()->id,
         ]);
 
         return redirect('/task');
     }
 
-    public function delete(Request $request, $id)
+    public function edit(Request $request, Task $task)
     {
-        Task::findOrFail($id)->delete();
 
+    }
+
+    public function update(Request $request, Task $task)
+    {
+        // 一致しない場合This action is unauthorized.エラーがでる
+        $this->authorize($task);
+//        abort_unless(\Gate::allows('update', $task), 403);
+        $task->update(request()->input());
+        return redirect('/task');
+    }
+
+    public function delete(Request $request, Task $task)
+    {
+//        if (\Gate::denies('update', $task)) {
+//            return redirect('/post')->with('message', '編集できるのは投稿者と管理者のみです。');
+//        }
+        // 一致しない場合This action is unauthorized.エラーがでる
+        $this->authorize($task);
+        $task->delete();
         return redirect('/task');
     }
 }

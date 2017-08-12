@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTasksTable extends Migration
+class CreateTasksForeignKeys extends Migration
 {
+    protected $table = 'tasks';
+
     /**
      * Run the migrations.
      *
@@ -13,12 +15,8 @@ class CreateTasksTable extends Migration
      */
     public function up()
     {
-        Schema::create('tasks', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('content');
-            $table->integer('user_id')->unsigned();
-            $table->timestamps();
-            $table->softDeletes();
+        Schema::table($this->table, function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -29,6 +27,8 @@ class CreateTasksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tasks');
+        Schema::table($this->table, function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+        });
     }
 }

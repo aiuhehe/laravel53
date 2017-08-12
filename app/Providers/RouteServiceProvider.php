@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -26,6 +27,12 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+
+        /**
+         * 第１引数：{}に相当するもの
+         * 第２引数：結合させるモデルクラス
+         */
+        Route::model('task', \App\Task::class);
     }
 
     /**

@@ -35,8 +35,10 @@ Route::group(['prefix' => '/task'], function () {
     Route::get('/', 'TasksController@index');
     /** タスク追加 */
     Route::post('/', 'TasksController@add');
+    /** タスク編集 */
+    Route::post('edit/{task}', 'TasksController@edit');
     /** タスク削除 */
-    Route::delete('/{id}', 'TasksController@delete');
+    Route::delete('/{task}', 'TasksController@delete');
 });
 
 
